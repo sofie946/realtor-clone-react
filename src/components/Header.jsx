@@ -1,8 +1,10 @@
 import { useLocation, useNavigate } from "react-router-dom"
 export default function Header() {
+  
   const location = useLocation();
   const navigate = useNavigate()
   console.log(location.pathname);
+
   function pathMathRoute(route){
     if(route === location.pathname){
       return true
@@ -20,6 +22,7 @@ export default function Header() {
             onClick={()=>navigate("/")}
             />
         </div>
+
         <div>
           <ul className="flex space-x-10">
             <li className={`cursor-pointer py-3 text-sm font-semibold
